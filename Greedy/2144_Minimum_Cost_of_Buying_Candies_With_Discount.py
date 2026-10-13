@@ -1,0 +1,8 @@
+class Solution:
+    def minimumCost(self, cost: list[int]) -> int:
+        cost.sort(reverse=True)
+        total = 0
+        for i, price in enumerate(cost):
+            if i % 3 != 2:
+                total += price
+        return total
